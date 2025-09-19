@@ -24,8 +24,9 @@ fi
 IFS='
 '
 
-echo "Checking staged file sizes"
+# Check staged file sizes
 shouldFail=false
+
 # `--diff-filter=d` -> skip deletions
 for file in $( git diff-index --cached --diff-filter=d --name-only "$against" ); do
 	# Skip for directories (git submodules)

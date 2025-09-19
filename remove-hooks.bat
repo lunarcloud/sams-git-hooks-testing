@@ -1,0 +1,1 @@
+@bash remove-hooks.sh

@@ -48,8 +48,9 @@ EOF
 	exit 1
 fi
 
-exec $SCRIPT_DIR/pre-commit-prevent-large-files
-exec $SCRIPT_DIR/pre-commit-prevent-directly-committing-main
+$SCRIPT_DIR/pre-commit-prevent-large-files
+
+$SCRIPT_DIR/pre-commit-prevent-directly-committing-main
 
 # If there are whitespace errors, print the offending file names and fail.
 exec git diff-index --check --cached $against --
