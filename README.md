@@ -1,2 +1,2 @@
 # Git hooks
-Some example hooks and a means to set them up to be used
+Some example hooks and a means to set them up to be used.
