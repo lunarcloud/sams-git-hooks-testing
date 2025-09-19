@@ -1,2 +1,2 @@
-# sams-git-hooks-testing
-just testing git hooks
+# Git hooks
+Some example hooks and a means to set them up to be used.
