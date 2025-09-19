@@ -24,3 +24,4 @@ function install() {
 # Copies the hooks to the git folder
 install pre-commit-prevent-large-files
 install prevent-merge
+install pre-commit

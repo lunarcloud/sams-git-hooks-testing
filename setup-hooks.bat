@@ -2,8 +2,9 @@
 @echo off
 
 :: Copies the hooks to the git folder
-CALL :INSTALL .\hooks\pre-commit-prevent-large-files.sh
-CALL :INSTALL .\hooks\prevent-merge.sh
+CALL :INSTALL pre-commit-prevent-large-files
+CALL :INSTALL prevent-merge
+CALL :INSTALL pre-commit
 
 :: Exit cleanly
 GOTO :EOF
@@ -13,15 +14,11 @@ GOTO :EOF
     @echo off
     setlocal
 
-    :: put it in the right folder
-    copy /V /-Y %~1 .\.git\hooks\
+    :: put it in the right folder without extension
+    copy /V /-Y .\hooks\%~1.sh .\.git\hooks\%~1
 
-    :: strip the extension
-    cd .\.git\hooks\
-    move %~nx1 %~n1
-    
     :: Ensure its executable for git (uses git bash)
-    bash -c "chmod a+x %~n1"
+    bash -c "chmod a+x .git/hooks/%~1"
 
     :: Exit cleanly
     GOTO :EOF
