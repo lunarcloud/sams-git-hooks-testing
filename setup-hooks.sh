@@ -29,6 +29,7 @@ function install() {
 # Copies the hooks to the git folder
 install pre-commit-prevent-large-files
 install pre-commit-prevent-directly-committing-main
+install pre-commit-prevent-nonascii-files
 install pre-commit
 install pre-merge-commit
 

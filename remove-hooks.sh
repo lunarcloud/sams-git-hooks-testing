@@ -13,6 +13,7 @@ function uninstall() {
 # Copies the hooks to the git folder
 uninstall pre-commit-prevent-large-files
 uninstall pre-commit-prevent-directly-committing-main
+uninstall pre-commit-prevent-nonascii-files
 uninstall pre-commit
 uninstall pre-merge-commit
 
